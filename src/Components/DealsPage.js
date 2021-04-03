@@ -5,6 +5,7 @@ function DealsPage() {
     return (
         <div className='background-img'>
             <Deal/>
+            <Deal/>
         </div>
     )
 }

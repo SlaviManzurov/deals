@@ -1,0 +1,15 @@
+img{
+    height:100px;
+    width: 100px;
+}
+
+.deal {
+    background:rgb(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border: 2px solid rgb(96, 12, 134);
+    border-radius: 30px;
+}
