@@ -1,0 +1,13 @@
+nav {
+    display: flex;
+    justify-content:space-between;
+    background: rgb(83,66,147);
+    background: linear-gradient(90deg, rgba(83,66,147,1) 0%, rgba(5,187,148,1) 100%);
+}
+
+li {
+    
+    display: inline;
+    padding: 5px;
+    margin: 5px;
+}
