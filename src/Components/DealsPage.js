@@ -1,9 +1,17 @@
 import Deal from './Deal'
-import './DealPage.css'
 
 function DealsPage() {
     return (
-        <div className='background-img'>
+        <div>
+            <Deal/>
+            <Deal/>
+            <Deal/>
+            <Deal/>
+            <Deal/>
+            <Deal/>
+            <Deal/>
+            <Deal/>
+            <Deal/>
             <Deal/>
             <Deal/>
         </div>

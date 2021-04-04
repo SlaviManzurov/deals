@@ -3,4 +3,5 @@ footer {
     justify-content:center;
     background: rgb(83,66,147);
     background: linear-gradient(90deg, rgba(83,66,147,1) 0%, rgba(5,187,148,1) 100%);
+    margin-top: -20px;
 }

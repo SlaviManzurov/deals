@@ -1,0 +1,6 @@
+.background-img {
+    background: url('./supermarketcart.jpg') no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 900px;
+}
