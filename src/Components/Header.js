@@ -14,7 +14,7 @@ function Header() {
             <div className="Header-left">
                 <ul>
                     <li>Wellcome, Slavi</li>
-                    <li>Logout</li>
+                    <Link to='/logout' className='link'>Logout</Link>
                 </ul>
             </div>
         </nav>

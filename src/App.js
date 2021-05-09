@@ -1,4 +1,5 @@
 import { Route, Switch, Redirect } from 'react-router-dom'
+import firebase from './utils/firebase'
 
 import './App.css'
 import Header from './Components/Header'
@@ -19,6 +20,10 @@ function App() {
           <Route path="/register" exact component ={Register}/>
           <Route path="/login" exact component ={Login}/>
           <Route path="/create" exact component ={Create}/>
+          <Route path="/logout" render={() => {
+              firebase.auth().signOut();
+              return <Redirect to="/" />
+            }} />
         </Switch>
 
       </div>
