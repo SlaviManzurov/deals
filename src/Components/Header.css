@@ -9,3 +9,9 @@ li {
     padding: 5px;
     margin: 5px;
 }
+.link {
+    display: inline;
+    padding: 5px;
+    margin: 5px;
+    color: black;
+}

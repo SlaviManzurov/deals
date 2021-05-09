@@ -2,12 +2,12 @@ import './Register.css'
 
 function Login() {
 
-    const onRegisterSubmitHandler = (e) => {
+    const onLoginSubmitHandler = (e) => {
         e.preventDefault();
     }
     return(
         <div className='form'>
-            <form onSubmit={onRegisterSubmitHandler}>
+            <form onSubmit={onLoginSubmitHandler}>
                 <h1>Login</h1>
 
                 <label htmlFor="username">Username</label>
