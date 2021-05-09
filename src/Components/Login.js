@@ -1,5 +1,6 @@
-import './Register.css'
 import firebase from '../utils/firebase'
+
+import './Register.css'
 
 function Login() {
 

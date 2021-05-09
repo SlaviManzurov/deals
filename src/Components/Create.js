@@ -8,7 +8,8 @@ function Create() {
         <div className='form'>
             <form onSubmit={onRegisterSubmitHandler}>
                 <h1>Create deal</h1>
-
+                <label htmlFor="Sotre">Store</label>
+                <input type="text"></input>
                 <label htmlFor="dealName">DealName</label>
                 <input type="text"></input>
                 <label htmlFor="price">Price</label>
