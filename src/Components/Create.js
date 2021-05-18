@@ -1,8 +1,12 @@
 import './Register.css'
 
+import { useHistory, useHistry } from "react-router-dom"
+
+
 import * as dealServices from './services/dealServices'
 
 function Create() {
+    let history = useHistory();
     const onRegisterSubmitHandler = (e) => {
         e.preventDefault();
 
@@ -15,9 +19,9 @@ function Create() {
 
 
         dealServices.create(store, dealName, price, discount, untile, imagUrl)
-            .then(
-                console.log(store, dealName, price, discount, untile, imagUrl)
-            )
+            .then(() => {
+                history.push('/')
+            })
 
     }
 
