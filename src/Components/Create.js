@@ -1,6 +1,6 @@
 import './Register.css'
 
-import { useHistory, useHistry } from "react-router-dom"
+import { useHistory} from "react-router-dom"
 
 
 import * as dealServices from './services/dealServices'
@@ -15,10 +15,10 @@ function Create() {
         const price = e.target.price.value
         const discount = e.target.discount.value
         const untile = e.target.untile.value
-        const imagUrl = e.target.imagUrl.value
+        const imageUrl = e.target.imageUrl.value
 
 
-        dealServices.create(store, dealName, price, discount, untile, imagUrl)
+        dealServices.create(store, dealName, price, discount, untile, imageUrl)
             .then(() => {
                 history.push('/')
             })
@@ -40,7 +40,7 @@ function Create() {
                 <label htmlFor="untile">Untile</label>
                 <input type="text" name="untile"></input>
                 <label htmlFor="imgUrl">Image</label>
-                <input type="text" name="imagUrl"></input>
+                <input type="text" name="imageUrl"></input>
 
                 <p>
                     <input className='button' type="submit" value='Create'></input>
