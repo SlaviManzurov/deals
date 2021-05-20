@@ -13,7 +13,9 @@ function Deal({
             <img src={imageUrl} alt=""/>
             <h2>{store}</h2>
             <h3>{dealName}</h3>
-            <span>{price}</span><span>{discount}</span><span>{untile}</span>
+            <span>{price}</span>
+            <span>{discount}</span>
+            <span>{untile}</span>
         </div>
     )
 }

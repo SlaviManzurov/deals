@@ -6,7 +6,7 @@ export const create = (store, dealName, price, discount, untile, imageUrl) => {
         dealName: dealName,
         price: price,
         discount: discount,
-        utile: untile,
+        untile: untile,
         imageUrl: imageUrl
     }
 
