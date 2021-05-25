@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./Header.css"
-function Header() {
+function Header({username, isAuth}) {
+
+    console.log(username);
     return (
         <nav>
             <div className="Header-right">
@@ -13,7 +15,10 @@ function Header() {
             </div>
             <div className="Header-left">
                 <ul>
-                    <li>Wellcome, Slavi</li>
+                    {isAuth
+                    ?(<li>Wellcome, {username}</li>)
+                    :(<li>Wellcome, Guest</li>)
+                    }
                     <Link to='/logout' className='link'>Logout</Link>
                 </ul>
             </div>

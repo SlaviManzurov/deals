@@ -8,22 +8,30 @@ import DealPage from './Components/DealsPage'
 import Register from './Components/Register'
 import Login from './Components/Login'
 import Create from './Components/Create'
+import { useEffect, useState } from 'react'
 
 function App() {
+
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged(setUser)
+  }, [])
+
   return (
     <div className="App">
-      <Header />
+      <Header username= {user?.email} isAuth = {Boolean(user)}/>
       <div className='background-img'>
 
         <Switch>
-          <Route path="/" exact component ={DealPage}/>
-          <Route path="/register" exact component ={Register}/>
-          <Route path="/login" exact component ={Login}/>
-          <Route path="/create" exact component ={Create}/>
+          <Route path="/" exact component={DealPage} />
+          <Route path="/register" exact component={Register} />
+          <Route path="/login" exact component={Login} />
+          <Route path="/create" exact component={Create} />
           <Route path="/logout" render={() => {
-              firebase.auth().signOut();
-              return <Redirect to="/" />
-            }} />
+            firebase.auth().signOut();
+            return <Redirect to="/" />
+          }} />
         </Switch>
 
       </div>
