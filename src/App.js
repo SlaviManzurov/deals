@@ -9,6 +9,7 @@ import Register from './Components/Register'
 import Login from './Components/Login'
 import Create from './Components/Create'
 import { useEffect, useState } from 'react'
+import AuthContext from './contexts/AuthContext'
 
 function App() {
 
@@ -18,24 +19,32 @@ function App() {
     firebase.auth().onAuthStateChanged(setUser)
   }, [])
 
+  const authInfo = {
+    isAuth: Boolean(user),
+    username: user?.email
+  }
+
   return (
     <div className="App">
-      <Header username= {user?.email} isAuth = {Boolean(user)}/>
-      <div className='background-img'>
+      <AuthContext.Provider value={authInfo}>
+        <Header />
+        <div className='background-img'>
 
-        <Switch>
-          <Route path="/" exact component={DealPage} />
-          <Route path="/register" exact component={Register} />
-          <Route path="/login" exact component={Login} />
-          <Route path="/create" exact component={Create} />
-          <Route path="/logout" render={() => {
-            firebase.auth().signOut();
-            return <Redirect to="/" />
-          }} />
-        </Switch>
+          <Switch>
+            <Route path="/" exact component={DealPage} />
+            <Route path="/register" exact component={Register} />
+            <Route path="/login" exact component={Login} />
+            <Route path="/create" exact component={Create} />
+            <Route path="/logout" render={() => {
+              firebase.auth().signOut();
+              return <Redirect to="/" />
+            }} />
+          </Switch>
 
-      </div>
-      <Footer />
+        </div>
+        <Footer />
+      </AuthContext.Provider>
+z
     </div>
   );
 }

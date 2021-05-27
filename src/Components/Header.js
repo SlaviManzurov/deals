@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
+import AuthContext from "../contexts/AuthContext";
+import {useContext} from 'react'
 import "./Header.css"
-function Header({username, isAuth}) {
+
+
+function Header() {
+
+    const { username, isAuth } = useContext(AuthContext)
 
     console.log(username);
     return (
@@ -16,8 +22,8 @@ function Header({username, isAuth}) {
             <div className="Header-left">
                 <ul>
                     {isAuth
-                    ?(<li>Wellcome, {username}</li>)
-                    :(<li>Wellcome, Guest</li>)
+                        ? (<li>Wellcome, {username}</li>)
+                        : (<li>Wellcome, Guest</li>)
                     }
                     <Link to='/logout' className='link'>Logout</Link>
                 </ul>
