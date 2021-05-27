@@ -8,14 +8,16 @@ function Deal({
     untile,
     imageUrl
 }) {
+
+    console.log(price);
     return(
         <div className="deal">
             <img src={imageUrl} alt=""/>
             <h2>{store}</h2>
             <h3>{dealName}</h3>
-            <span>{price}</span>
-            <span>{discount}</span>
-            <span>{untile}</span>
+            <p>{Number(price).toFixed(2)}lv</p>
+            <p>{Number(discount).toFixed(2)}lv</p>
+            <p>{untile}</p>
         </div>
     )
 }
