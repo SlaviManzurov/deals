@@ -1,4 +1,4 @@
-const url = "https://deals-adc43-default-rtdb.firebaseio.com/deal.json"
+const url = `https://deals-adc43-default-rtdb.firebaseio.com/deal.json`
 
 export const create = (dealName, store, address, price, discount, until, imageUrl) => {
     let deal = {
@@ -18,6 +18,13 @@ export const create = (dealName, store, address, price, discount, until, imageUr
         },
         body: JSON.stringify(deal)
     })
+}
+
+
+
+export const get3 = () => {
+    return fetch(url + `?orderBy="$key"&limitToLast=3`)
+        .then(res => res.json())
 }
 
 export const getAll = () => {
