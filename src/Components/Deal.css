@@ -13,3 +13,6 @@ img{
     border: 2px solid rgb(96, 12, 134);
     border-radius: 30px;
 }
+.price{
+    color: rgba(255,0,102,255);
+}

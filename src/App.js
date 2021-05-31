@@ -29,7 +29,6 @@ function App() {
       <AuthContext.Provider value={authInfo}>
         <Header />
         <div className='background-img'>
-
           <Switch>
             <Route path="/" exact component={DealPage} />
             <Route path="/register" exact component={Register} />
@@ -40,11 +39,9 @@ function App() {
               return <Redirect to="/" />
             }} />
           </Switch>
-
         </div>
         <Footer />
       </AuthContext.Provider>
-z
     </div>
   );
 }

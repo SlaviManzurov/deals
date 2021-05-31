@@ -15,11 +15,11 @@ function Create() {
         const address = e.target.address.value
         const price = e.target.price.value
         const discount = e.target.discount.value
-        const untile = e.target.untile.value
+        const until = e.target.until.value
         const imageUrl = e.target.imageUrl.value
 
 
-        dealServices.create(dealName, store, address, price, discount, untile, imageUrl)
+        dealServices.create(dealName, store, address, price, discount, until, imageUrl)
             .then(() => {
                 history.push('/')
             })
@@ -40,8 +40,8 @@ function Create() {
                 <input type="text" name="price"></input>
                 <label htmlFor="discount">Discount</label>
                 <input type="text" name="discount"></input>
-                <label htmlFor="untile">Untile</label>
-                <input type="text" name="untile"></input>
+                <label htmlFor="until">until</label>
+                <input type="text" name="until"></input>
                 <label htmlFor="imgUrl">Image</label>
                 <input type="text" name="imageUrl"></input>
 

@@ -6,20 +6,31 @@ function Deal({
     dealName,
     price,
     discount,
-    untile,
+    until,
     imageUrl
 }) {
 
     console.log(price);
-    return(
+    return (
         <div className="deal">
-            <img src={imageUrl} alt=""/>
+            <img src={imageUrl} alt="" />
             <h2>{dealName}</h2>
-            <h3>{store}</h3>
-            <h4>{address}</h4>
-            <p>Price{Number(price).toFixed(2)}lv</p>
-            <p>Discount:{Number(discount).toFixed(2)}lv</p>
-            <p>{untile}</p>
+            <div>
+                <h3>{store}</h3>
+                <p>{address}</p>
+            </div>
+            <div className ="price">
+                <p><strong>Price</strong></p>
+                <p>{Number(price).toFixed(2)} lv.</p>
+            </div>
+            <div>
+                <p><strong>Discount</strong></p>
+                <p>{Number(discount).toFixed(2)} lv.</p>
+            </div>
+            <div>
+                <p><strong>Take it until!</strong></p>
+                <p>{until}</p>
+            </div>
         </div>
     )
 }
