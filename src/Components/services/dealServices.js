@@ -1,9 +1,10 @@
 const url = "https://deals-adc43-default-rtdb.firebaseio.com/deal.json"
 
-export const create = (store, dealName, price, discount, untile, imageUrl) => {
+export const create = (dealName, store, address, price, discount, untile, imageUrl) => {
     let deal = {
-        store: store,
         dealName: dealName,
+        store: store,
+        address: address,
         price: price,
         discount: discount,
         untile: untile,
