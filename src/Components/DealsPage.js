@@ -27,7 +27,7 @@ function DealsPage() {
                 <Deal key={key} {...value} />
             )}
             {!isAuth
-                ? (<h1> <Link to='/register'>Registreate here for more offers</Link></h1>)
+                ? (<h1> <Link to='/register'>Register here for more offers</Link></h1>)
                 : (null)
             }
         </div>
