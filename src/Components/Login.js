@@ -1,5 +1,6 @@
 import firebase from '../utils/firebase'
 import { useHistory } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 import './Register.css'
 
@@ -36,6 +37,7 @@ function Login() {
                 </p>
 
             </form>
+            <h1><Link to='/register'>If you are new, Register here!</Link></h1>
         </div>
     )
 }
