@@ -8,7 +8,6 @@ function Header() {
 
     const { username, isAuth } = useContext(AuthContext)
 
-    console.log(username);
     return (
         <nav>
             <div className="Header-right">

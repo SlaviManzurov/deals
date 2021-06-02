@@ -18,9 +18,8 @@ function DealsPage() {
             .then(res => setDeals(res))
         }
 
-    }, [])
+    }, [isAuth])
 
-    console.log(deals);
     return (
         <div>
             {Object.entries(deals).map(([key, value]) =>

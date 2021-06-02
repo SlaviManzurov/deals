@@ -10,7 +10,6 @@ function Deal({
     imageUrl
 }) {
 
-    console.log(price);
     return (
         <div className="deal">
             <img src={imageUrl} alt="" />
