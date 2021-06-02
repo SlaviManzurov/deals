@@ -1,9 +1,11 @@
 import firebase from '../utils/firebase'
+import {useHistory} from 'react-router-dom'
 
 import './Register.css'
 
 
 function Register() {
+    let history = useHistory()
 
     const onRegisterSubmitHandler = (e) => {
         e.preventDefault();
@@ -18,6 +20,7 @@ function Register() {
             firebase.auth().createUserWithEmailAndPassword(username, password)
                 .then((userCredential) => {
                     console.log(userCredential);
+                    history.push('/')
                 })
         }
 

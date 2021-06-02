@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react'
 import AuthContext from '../contexts/AuthContext'
 import Deal from './Deal'
 import * as dealServices from './services/dealServices'
+import { Link } from 'react-router-dom'
 
 function DealsPage() {
 
@@ -15,7 +16,7 @@ function DealsPage() {
                 .then(res => setDeals(res))
         } else {
             dealServices.get3()
-            .then(res => setDeals(res))
+                .then(res => setDeals(res))
         }
 
     }, [isAuth])
@@ -25,6 +26,10 @@ function DealsPage() {
             {Object.entries(deals).map(([key, value]) =>
                 <Deal key={key} {...value} />
             )}
+            {!isAuth
+                ? (<h1> <Link to='/register'>Registreate here for more offers</Link></h1>)
+                : (null)
+            }
         </div>
     )
 }

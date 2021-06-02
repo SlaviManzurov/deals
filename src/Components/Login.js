@@ -1,8 +1,10 @@
 import firebase from '../utils/firebase'
+import { useHistory } from 'react-router-dom'
 
 import './Register.css'
 
 function Login() {
+    let history = useHistory()
 
     const onLoginSubmitHandler = (e) => {
         e.preventDefault();
@@ -12,12 +14,13 @@ function Login() {
 
 
         firebase.auth().signInWithEmailAndPassword(username, password)
-        .then((userCredential) => {
-            console.log(userCredential);
-        })
+            .then((userCredential) => {
+                console.log(userCredential);
+                history.push('/')
+            })
 
     }
-    return(
+    return (
         <div className='form'>
             <form onSubmit={onLoginSubmitHandler}>
                 <h1>Login</h1>
@@ -27,9 +30,9 @@ function Login() {
 
                 <label htmlFor="password">Password</label>
                 <input type="password" name='password'></input>
-                
+
                 <p>
-                <input className='button' type="submit" value='Login'></input>
+                    <input className='button' type="submit" value='Login'></input>
                 </p>
 
             </form>
