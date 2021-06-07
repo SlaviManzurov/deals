@@ -26,7 +26,7 @@ export const get3 = () => {
     return fetch(url + `?orderBy="$key"&limitToLast=3`)
         .then(res => {
             if (res) {
-                res.json()
+               return res.json()
             }
             return {}
         })
@@ -36,7 +36,7 @@ export const getAll = () => {
     return fetch(url)
         .then(res => {
             if (res) {
-                res.json()
+               return res.json()
             }
             return {}
         })
