@@ -8,7 +8,7 @@ function DealsPage() {
 
     const { isAuth } = useContext(AuthContext)
 
-    const [deals, setDeals] = useState([])
+    const [deals, setDeals] = useState({})
 
     useEffect(() => {
         if (isAuth) {
@@ -21,6 +21,7 @@ function DealsPage() {
 
     }, [isAuth])
 
+    console.log(deals);
     return (
         <div>
             {Object.entries(deals).map(([key, value]) =>
