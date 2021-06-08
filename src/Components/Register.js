@@ -1,11 +1,13 @@
 import firebase from '../utils/firebase'
-import {useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
+import { useState } from 'react'
 
 import './Register.css'
 
 
 function Register() {
     let history = useHistory()
+    const [error, setError] = useState(null)
 
     const onRegisterSubmitHandler = (e) => {
         e.preventDefault();
@@ -21,8 +23,11 @@ function Register() {
                 .then((userCredential) => {
                     console.log(userCredential);
                     history.push('/')
-                })
+                }).catch(
+                    err => setError(err.message)
+                )
         }
+        setError("Passwords don't match")
 
     }
     return (
@@ -43,6 +48,7 @@ function Register() {
                 </p>
 
             </form>
+            <h2>{error}</h2>
         </div>
     )
 }
