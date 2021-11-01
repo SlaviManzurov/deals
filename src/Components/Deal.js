@@ -16,7 +16,7 @@ function Deal({
             <h2>{dealName}</h2>
             <div>
                 <h3>{store}</h3>
-                <a href={`https://www.google.com/maps/search/?api=1&query=${address}`} target="_blank">{address}</a>
+                <a href={`https://www.google.com/maps/search/?api=1&query=${address}`}>{address}</a>
             </div>
             <div className ="price">
                 <p><strong>Price</strong></p>
