@@ -14,7 +14,7 @@ function Deal({
         <div className="deal">
             <img src={imageUrl} alt="" />
             <h2>{dealName}</h2>
-            <div>
+            <div className = "address">
                 <h3>{store}</h3>
                 <a href={`https://www.google.com/maps/search/?api=1&query=${address}`}>{address}</a>
             </div>
